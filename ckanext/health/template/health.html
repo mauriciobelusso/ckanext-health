@@ -1,0 +1,17 @@
+<h2>Health Monitoring</h2>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Exercise</th>
+        <th>Duration</th>
+        <th>Calories</th>
+    </tr>
+    {% for record in h.get_health_data() %}
+    <tr>
+        <td>{{ record.date }}</td>
+        <td>{{ record.exercise }}</td>
+        <td>{{ record.duration }}</td>
+        <td>{{ record.calories }}</td>
+    </tr>
+    {% endfor %}
+</table>
